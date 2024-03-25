@@ -118,6 +118,8 @@ services:
       retries: 5
     networks:
       - loki
+    volumes:
+      - grafana-storage:/var/lib/grafana
 
   gateway:
     image: nginx:latest
@@ -193,3 +195,6 @@ services:
     command: -f json -d 200ms -l
     networks:
       - loki
+
+volumes:
+  grafana-storage: {}
