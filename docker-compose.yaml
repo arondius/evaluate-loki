@@ -103,10 +103,7 @@ services:
             type: loki
             access: proxy
             url: http://gateway:3100
-            jsonData:
-              httpHeaderName1: "X-Scope-OrgID"
-            secureJsonData:
-              httpHeaderValue1: "tenant1"
+            basicAuth: false
         EOF
         /run.sh      
     ports:
@@ -187,12 +184,6 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-    networks:
-      - loki
-
-  flog:
-    image: mingrammer/flog
-    command: -f json -d 200ms -l
     networks:
       - loki
 
