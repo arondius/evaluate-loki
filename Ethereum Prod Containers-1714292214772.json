@@ -1,0 +1,269 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 3,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "P8E80F9AEF21F6940"
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 9,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "dedupStrategy": "none",
+        "enableLogDetails": false,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": false,
+        "showTime": true,
+        "sortOrder": "Ascending",
+        "wrapLogMessage": false
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "P8E80F9AEF21F6940"
+          },
+          "editorMode": "builder",
+          "expr": "{container=\"prod_ethereum_src_container\"} |= ``",
+          "queryType": "range",
+          "refId": "A"
+        }
+      ],
+      "title": "Src",
+      "transformations": [],
+      "type": "logs"
+    },
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "P8E80F9AEF21F6940"
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 8,
+        "x": 9,
+        "y": 0
+      },
+      "id": 6,
+      "options": {
+        "dedupStrategy": "none",
+        "enableLogDetails": false,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": false,
+        "showTime": true,
+        "sortOrder": "Ascending",
+        "wrapLogMessage": false
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "P8E80F9AEF21F6940"
+          },
+          "editorMode": "builder",
+          "expr": "{container=\"prod_ethereum_uniswap_v3_liquidity_container\"} |= ``",
+          "queryType": "range",
+          "refId": "A"
+        }
+      ],
+      "title": "UniswapV3LiquidityContainer",
+      "transformations": [],
+      "type": "logs"
+    },
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "P8E80F9AEF21F6940"
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 7,
+        "x": 17,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "dedupStrategy": "none",
+        "enableLogDetails": false,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": false,
+        "showTime": true,
+        "sortOrder": "Ascending",
+        "wrapLogMessage": false
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "P8E80F9AEF21F6940"
+          },
+          "editorMode": "builder",
+          "expr": "{container=\"prod_ethereum_swap_container\"} |= ``",
+          "queryType": "range",
+          "refId": "A"
+        }
+      ],
+      "title": "Swap",
+      "transformations": [],
+      "type": "logs"
+    },
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "P8E80F9AEF21F6940"
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 9,
+        "x": 0,
+        "y": 14
+      },
+      "id": 7,
+      "options": {
+        "dedupStrategy": "none",
+        "enableLogDetails": false,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": false,
+        "showTime": true,
+        "sortOrder": "Ascending",
+        "wrapLogMessage": false
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "P8E80F9AEF21F6940"
+          },
+          "editorMode": "builder",
+          "expr": "{container=\"prod_ethereum_token_check_container\"} |= ``",
+          "queryType": "range",
+          "refId": "A"
+        }
+      ],
+      "title": "Token check",
+      "type": "logs"
+    },
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "P8E80F9AEF21F6940"
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 8,
+        "x": 9,
+        "y": 14
+      },
+      "id": 5,
+      "options": {
+        "dedupStrategy": "none",
+        "enableLogDetails": false,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": false,
+        "showTime": true,
+        "sortOrder": "Ascending",
+        "wrapLogMessage": false
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "P8E80F9AEF21F6940"
+          },
+          "editorMode": "builder",
+          "expr": "{container=\"prod_ethereum_db_container\"} |= ``",
+          "queryType": "range",
+          "refId": "A"
+        }
+      ],
+      "title": "DB",
+      "transformations": [],
+      "type": "logs"
+    },
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "P8E80F9AEF21F6940"
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 7,
+        "x": 17,
+        "y": 14
+      },
+      "id": 3,
+      "options": {
+        "dedupStrategy": "none",
+        "enableLogDetails": false,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": false,
+        "showTime": true,
+        "sortOrder": "Ascending",
+        "wrapLogMessage": false
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "P8E80F9AEF21F6940"
+          },
+          "editorMode": "builder",
+          "expr": "{container=\"prod_ethereum_bought_token_check_container\"} |= ``",
+          "queryType": "range",
+          "refId": "A"
+        }
+      ],
+      "title": "BoughtTokens",
+      "transformations": [],
+      "type": "logs"
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 39,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Ethereum Prod Containers",
+  "uid": "baca1031-c51a-4d17-83a6-52adc4711649",
+  "version": 1,
+  "weekStart": ""
+}
